@@ -12,7 +12,7 @@ package com.sdu.algorithm.dp;
  * 输入： 2
  * 输出： 2
  * */
-public class DP70 {
+public class DP070 {
 
   // 递归方式
   private static int climbStairs(int n) {
