@@ -21,41 +21,27 @@ public class BFS103 {
     queue.offer(root);
 
     List<List<Integer>> result = new LinkedList<>();
-    LinkedList<Integer> levelResult = new LinkedList<>();
-
-    int curCnt= 1;
-    int visitCnt = 0;
-    int nextCnt = 0;
     boolean reverse = false;
 
     while (!queue.isEmpty()) {
-      TreeNode node = queue.poll();
-      visitCnt += 1;
-      // 更改插入顺序
-      if (reverse) {
-        levelResult.addFirst(node.val);
-      } else {
-        levelResult.addLast(node.val);
+      int size = queue.size();
+      LinkedList<Integer> levelResult = new LinkedList<>();
+      for (int i = 0; i < size; ++i) {
+        TreeNode node = queue.poll();
+        if (node.left != null) {
+          queue.offer(node.left);
+        }
+        if (node.right != null) {
+          queue.offer(node.right);
+        }
+        if (reverse) {
+          levelResult.addFirst(node.val);
+        } else {
+          levelResult.addLast(node.val);
+        }
       }
-
-      if (node.left != null) {
-        queue.offer(node.left);
-        nextCnt += 1;
-      }
-      if (node.right != null) {
-        queue.offer(node.right);
-        nextCnt += 1;
-      }
-
-      if (curCnt == visitCnt) {
-        reverse = !reverse;
-        curCnt = nextCnt;
-        nextCnt = 0;
-        visitCnt = 0;
-
-        result.add(levelResult);
-        levelResult = new LinkedList<>();
-      }
+      result.add(levelResult);
+      reverse = !reverse;
     }
 
     return result;
