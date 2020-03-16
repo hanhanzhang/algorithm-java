@@ -1,6 +1,7 @@
 package com.sdu.algorithm.tree;
 
 import com.sdu.algorithm.utils.TreeNode;
+import com.sdu.algorithm.utils.TreeUtils;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -56,5 +57,9 @@ public class T098 {
     return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
   }
 
+  public static void main(String[] args) {
+    TreeNode root = TreeUtils.buildTree(new Integer[] {5, 1, 4, null, null, 3, 6});
+    System.out.println(isValidBST0(root));
+  }
 
 }
