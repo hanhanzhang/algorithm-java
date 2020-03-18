@@ -1,0 +1,20 @@
+package com.sdu.algorithm.graph;
+
+public class G684 {
+
+  private static int[] findRedundantConnection(int[][] edges) {
+    return null;
+  }
+
+  public static void main(String[] args) {
+    int[][] edges = new int[][] {
+        {1, 2},
+        {2, 3},
+        {3, 4},
+        {1, 4},
+        {1, 5}
+    };
+
+  }
+
+}
