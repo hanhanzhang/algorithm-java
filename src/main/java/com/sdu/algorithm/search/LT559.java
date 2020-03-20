@@ -4,7 +4,7 @@ import com.sdu.algorithm.utils.Node;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class BFS559 {
+public class LT559 {
 
   private static int maxDepth(Node root) {
     if (root == null) {

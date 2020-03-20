@@ -1,6 +1,6 @@
 package com.sdu.algorithm.search;
 
-public class BFS690 {
+public class LT690 {
 
   public static void main(String[] args) {
 

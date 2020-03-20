@@ -10,7 +10,7 @@ import java.util.Queue;
 /**
  * 给定一个二叉树, 返回其节点值的锯齿形层次遍历(即先从左往右, 再从右往左进行下一层遍历, 以此类推, 层与层之间交替进行)
  * */
-public class BFS103 {
+public class LT103 {
 
   private static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
     if (root == null) {

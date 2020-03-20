@@ -3,7 +3,7 @@ package com.sdu.algorithm.search;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class DFS542 {
+public class LT542 {
 
 
   private static int[][] updateMatrix(int[][] matrix) {

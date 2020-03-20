@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 
-public class BFS310 {
+public class LT310 {
 
 
   private static int bfs(int[][] graph, int vertex) {

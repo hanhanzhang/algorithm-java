@@ -3,7 +3,7 @@ package com.sdu.algorithm.search;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class BFS994 {
+public class LT994 {
 
   private static int orangesRotting(int[][] grid) {
 

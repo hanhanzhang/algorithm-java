@@ -4,7 +4,7 @@ import com.sdu.algorithm.utils.TreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BFS513 {
+public class LT513 {
 
   private static int findBottomLeftValue(TreeNode root) {
     if (root == null) {

@@ -1,8 +1,5 @@
 package com.sdu.algorithm.search;
 
-
-public class BFS102 {
-
-
+public class LT993 {
 
 }

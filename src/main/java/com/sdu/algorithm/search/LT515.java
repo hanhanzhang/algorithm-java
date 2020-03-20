@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class BSF515 {
+public class LT515 {
 
   private static List<Integer> largestValues(TreeNode root) {
     if (root == null) {
