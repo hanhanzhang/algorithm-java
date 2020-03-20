@@ -1,6 +1,6 @@
 package com.sdu.algorithm.graph;
 
-public class G684 {
+public class LT684 {
 
   private static int[] findRedundantConnection(int[][] edges) {
     return null;
