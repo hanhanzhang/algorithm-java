@@ -3,7 +3,7 @@ package com.sdu.algorithm.tree;
 import com.sdu.algorithm.utils.TreeNode;
 import com.sdu.algorithm.utils.TreeUtils;
 
-public class T230 {
+public class LT230 {
 
   private static int kth = 0;
   private static int kthVal = 0;

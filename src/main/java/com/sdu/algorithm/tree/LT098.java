@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class T098 {
+public class LT098 {
 
   private static void visitBST(TreeNode root, List<Integer> nodes) {
     if (root == null) {
