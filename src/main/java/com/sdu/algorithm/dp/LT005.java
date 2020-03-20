@@ -14,7 +14,7 @@ package com.sdu.algorithm.dp;
  * 输入: "cbbd"
  * 输出: "bb"
  * */
-public class DP005 {
+public class LT005 {
 
   private static boolean isPalindrome(char[] chars, int l, int h) {
     while (l <= h) {

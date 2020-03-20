@@ -1,6 +1,6 @@
 package com.sdu.algorithm.dp;
 
-public class DP091 {
+public class LT091 {
 
   private static int numDecodings(String s) {
     char[] chars = s.toCharArray();

@@ -11,7 +11,7 @@ package com.sdu.algorithm.dp;
  * 解释: 连续子数组 [4, -1, 2, 1] 的和最大为 6
  *
  * */
-public class DP053 {
+public class LT053 {
 
   private static int maxSubArray(int[] nums) {
     // f[i]表是以i结尾的最大连续子数组和值

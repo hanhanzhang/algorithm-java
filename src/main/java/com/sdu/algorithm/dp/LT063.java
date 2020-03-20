@@ -1,6 +1,6 @@
 package com.sdu.algorithm.dp;
 
-public class DP063 {
+public class LT063 {
 
   private static int uniquePathsWithObstacles(int[][] obstacleGrid) {
     int[][] dp = new int[obstacleGrid.length][obstacleGrid[0].length];

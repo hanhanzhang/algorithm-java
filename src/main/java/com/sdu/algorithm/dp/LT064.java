@@ -17,7 +17,7 @@ package com.sdu.algorithm.dp;
  * 输出: 7
  * 解释: 因为路径 1→3→1→1→1 的总和最小
  * */
-public class DP064 {
+public class LT064 {
 
   // 递归方式
   private static int minPathSum(int[][] grid, int i, int j) {

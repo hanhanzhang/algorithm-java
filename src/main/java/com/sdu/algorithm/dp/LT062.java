@@ -8,7 +8,7 @@ package com.sdu.algorithm.dp;
  * 问总共有多少条不同的路径
  *
  * */
-public class DP062 {
+public class LT062 {
 
   // 递归
   private static int uniquePaths(int m, int n) {
