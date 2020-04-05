@@ -6,34 +6,28 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
-/**
- * 给定一个二叉树, 返回它的中序遍历(非递归模式)
- * */
-public class LT094 {
+public class LT144 {
 
-  private static List<Integer> inorderTraversal(TreeNode root) {
+  private static List<Integer> preorderTraversal(TreeNode root) {
     List<Integer> res = new LinkedList<>();
     Stack<TreeNode> stack = new Stack<>();
 
     TreeNode cur = root;
-
     while (cur != null || !stack.isEmpty()) {
       while (cur != null) {
-        stack.push(cur);
+        res.add(cur.val);
+        stack.push(cur.right);
         cur = cur.left;
       }
       cur = stack.pop();
-      res.add(cur.val);
-      cur = cur.right;
     }
 
     return res;
   }
 
   public static void main(String[] args) {
-    TreeNode root = TreeUtils.buildTree(new Integer[] {1, null, 2, 3});
-    List<Integer> result = inorderTraversal(root);
-    System.out.println(result);
+    TreeNode root = TreeUtils.buildTree(new Integer[] {1, 2, 3, 4, 5});
+    System.out.println(preorderTraversal(root));
   }
 
 }
