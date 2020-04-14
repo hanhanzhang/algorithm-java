@@ -1,0 +1,5 @@
+package com.sdu.algorithm.tree;
+
+public class LT606 {
+
+}
