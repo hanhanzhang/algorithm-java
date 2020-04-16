@@ -1,6 +1,8 @@
 package com.sdu.algorithm.utils;
 
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class TreeUtils {
@@ -50,6 +52,26 @@ public class TreeUtils {
     }
 
     return root;
+  }
+
+  public static List<Integer> layerTravel(TreeNode root) {
+    if (root == null) return Collections.emptyList();
+
+    List<Integer> res = new LinkedList<>();
+
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.offer(root);
+
+    while (!queue.isEmpty()) {
+      TreeNode cur = queue.poll();
+      res.add(cur == null ? null : cur.val);
+      if (cur != null) {
+        queue.offer(cur.left);
+        queue.offer(cur.right);
+      }
+    }
+
+    return res;
   }
 
   public static void main(String[] args) {
