@@ -1,4 +1,4 @@
-package com.sdu.algorithm.tree;
+package com.sdu.algorithm.recruitment;
 
 import com.sdu.algorithm.utils.TreeNode;
 import com.sdu.algorithm.utils.TreeUtils;
@@ -6,7 +6,7 @@ import com.sdu.algorithm.utils.TreeUtils;
 /**
  * 面试题
  * */
-public class LT0412 {
+public class RM0412 {
 
   private int pathSum = 0;
 
@@ -58,7 +58,7 @@ public class LT0412 {
   public static void main(String[] args) {
     TreeNode node = TreeUtils.buildTree(new Integer[] {1});
 
-    LT0412 rt0412 = new LT0412();
+    RM0412 rt0412 = new RM0412();
     System.out.println(rt0412.pathSum(node, 1));
   }
 
