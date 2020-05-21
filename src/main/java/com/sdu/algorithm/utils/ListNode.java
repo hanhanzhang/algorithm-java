@@ -9,4 +9,8 @@ public class ListNode {
     this.val = val;
   }
 
+  @Override
+  public String toString() {
+    return String.valueOf(val);
+  }
 }
