@@ -1,6 +1,7 @@
 package com.sdu.algorithm.offercode;
 
 import com.sdu.algorithm.utils.TreeNode;
+import com.sdu.algorithm.utils.TreeUtils;
 
 public class JZ038 {
 
@@ -13,7 +14,8 @@ public class JZ038 {
   }
 
   public static void main(String[] args) {
-
+    TreeNode root = TreeUtils.buildTree(new Integer[] {1, 2, null, 3, 4});
+    System.out.println(TreeDepth(root));
   }
 
 }
