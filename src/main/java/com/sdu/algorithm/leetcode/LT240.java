@@ -2,33 +2,25 @@ package com.sdu.algorithm.leetcode;
 
 public class LT240 {
 
-  private static boolean search(int[][]matrix, int x1, int y1, int x2, int y2, int target) {
-    if (x1 > x2 || y1 > y2 || matrix[x1][y1] > target || matrix[x2][y2] < target) {
-      return false;
-    }
-    
-    int midX = (x1 + x2) / 2;
-    int midY = (y1 + y2) / 2;
-    if (matrix[midX][midY] == target) {
-      return true;
-    }
-
-    if (matrix[midX][midY] < target) {
-      return search(matrix, x1, midY, midX, y2, target)
-          || search(matrix, midX, y1, x2, midY, target)
-          || search(matrix, midX, midY, x2, y2, target);
-    }
-
-    return search(matrix, x1, midY, midX, y2, target)
-        || search(matrix, midX, y1, x2, midY, target)
-        || search(matrix, x1, y1, midX, midY, target);
-  }
 
   private static boolean searchMatrix(int[][] matrix, int target) {
-    if (matrix == null) {
+    if (matrix == null || matrix.length == 0) {
       return false;
     }
-    return search(matrix, 0, 0, matrix.length - 1, matrix[0].length - 1, target);
+    // 对角线方式查找, 折半无法解决
+    int row = 0, col = matrix[0].length - 1;
+    while (col >= 0 && row <= matrix.length - 1) {
+      if (target == matrix[row][col]) {
+        return true;
+      } else if (target > matrix[row][col]) {
+        // 当前行肯定不存在
+        row += 1;
+      } else {
+        // 当前列肯定不存在
+        col -= 1;
+      }
+    }
+    return false;
   }
 
   public static void main(String[] args) {
