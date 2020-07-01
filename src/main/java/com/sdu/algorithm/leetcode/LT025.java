@@ -47,7 +47,6 @@ public class LT025 {
     }
 
     ListNode[] ans = reverseKGroup(head, k, len);
-
     return ans[0];
   }
 
