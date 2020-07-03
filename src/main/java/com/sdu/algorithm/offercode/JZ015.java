@@ -26,6 +26,18 @@ public class JZ015 {
     return newHead;
   }
 
+  private static ListNode ReverseList01(ListNode head) {
+    // 非递归形式
+    ListNode pre = null;
+    while (head != null) {
+      ListNode temp = head.next;
+      head.next = pre;
+      pre = head;
+      head = temp;
+    }
+    return pre;
+  }
+
   public static void main(String[] args) {
     ListNode head = ListUtils.buildListNode(new Integer[] {1, 2, 3, 4, 5});
     ListNode newHead = ReverseList(head);
@@ -33,6 +45,15 @@ public class JZ015 {
     while (newHead != null) {
       System.out.println(newHead.val);
       newHead = newHead.next;
+    }
+
+    System.out.println("**********");
+
+    ListNode head1 = ListUtils.buildListNode(new Integer[] {1, 2, 3, 4, 5});
+    ListNode newHead1 = ReverseList01(head1);
+    while (newHead1 != null) {
+      System.out.println(newHead1.val);
+      newHead1 = newHead1.next;
     }
   }
 
