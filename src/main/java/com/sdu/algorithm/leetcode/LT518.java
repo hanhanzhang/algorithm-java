@@ -40,12 +40,30 @@ public class LT518 {
     return dfs(amount, coins, 0, new HashMap<>());
   }
 
+  private static int change01(int amount, int[] coins) {
+    if (amount <= 0) {
+      return 0;
+    }
+    int[] dp = new int[amount + 1];
+    dp[0] = 1;
+    for (int coin : coins) {
+      for (int j = 1; j <= amount; ++j) {
+        if (j >= coin) {
+          dp[j] = dp[j] + dp[j - coin];
+        }
+      }
+    }
+    return dp[amount];
+  }
+
 
   public static void main(String[] args) {
     System.out.println(change(5, new int[]{1, 2, 5}));
     System.out.println(change(2, new int[]{3}));
     System.out.println(change(100, new int[]{99, 1}));
     System.out.println(change(500, new int[] {3, 5, 7, 8, 9, 10, 11}));
+
+    System.out.println(change01(500, new int[] {3, 5, 7, 8, 9, 10, 11}));
   }
 
 }
