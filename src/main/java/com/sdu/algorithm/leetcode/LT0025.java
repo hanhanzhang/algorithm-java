@@ -3,7 +3,7 @@ package com.sdu.algorithm.leetcode;
 import com.sdu.algorithm.utils.ListNode;
 import com.sdu.algorithm.utils.ListUtils;
 
-public class LT025 {
+public class LT0025 {
 
   private static ListNode[] reverseKGroup(ListNode head, int k, int len) {
     if (head == null) {
