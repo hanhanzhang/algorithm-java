@@ -1,57 +1,51 @@
 package com.sdu.algorithm.leetcode;
 
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
 
-public class LT022 {
+public class LT0022 {
 
-
-  private static boolean isValid(char[] chars) {
-    if (chars == null || chars.length == 0) return true;
-    Stack<Character> stack = new Stack<>();
-    for (int i = 0; i < chars.length; ++i) {
-      char c = chars[i];
-      if (c == '(') {
-        stack.push(c);
-        continue;
-      }
-      if (c == ')') {
-        if (stack.isEmpty()) return false;
-        stack.pop();
-      }
-    }
-    return stack.isEmpty();
-  }
-
-  private static void generateParenthesis(int n, int charPos, char[] midResult, List<String> result) {
-    if (charPos >= 2 * n) {
-      if (isValid(midResult)) {
-        result.add(new String(midResult));
-      }
+  /**
+   * @param ret   中间结果
+   * @param left  剩余左括号数量
+   * @param right 剩余右括号数量
+   * @param ans   有效括号结果集
+   * */
+  private static void dfs(String ret, int left, int right, List<String> ans) {
+    if (left == 0 && right == 0) {
+      ans.add(ret);
       return;
     }
-    // 暴力穷举, 没有剪枝(中间结果无需拷贝)
-    midResult[charPos] = '(';
-    generateParenthesis(n, charPos + 1, midResult, result);
-    midResult[charPos] = ')';
-    generateParenthesis(n, charPos + 1, midResult, result);
+    if (left > right) {
+      // 剪枝(左括号剩余量多余右括号, 则说明不是有效的括号)
+      return;
+    }
+    if (left > 0) {
+      dfs(ret + "(", left - 1, right, ans);
+    }
+
+    if (right > 0) {
+      dfs(ret + ")", left, right - 1, ans);
+    }
   }
 
   private static List<String> generateParenthesis(int n) {
-    if (n <= 0) return Collections.emptyList();
-
-    LinkedList<String> result = new LinkedList<>();
-    char[] midResult = new char[2 * n];
-    generateParenthesis(n, 0, midResult, result);
-
-    return result;
+    // 类似组合
+    List<String> ans = new LinkedList<>();
+    dfs("", n, n, ans);
+    return ans;
   }
 
   public static void main(String[] args) {
     List<String> result = generateParenthesis(3);
     for (String pattern : result) {
+      System.out.println(pattern);
+    }
+
+    System.out.println("********");
+
+    List<String> result1 = generateParenthesis(0);
+    for (String pattern : result1) {
       System.out.println(pattern);
     }
   }
