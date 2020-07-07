@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
-public class LT020 {
+public class LT0020 {
 
   private static boolean isValid(String s) {
     if (s == null || s.isEmpty()) return true;
