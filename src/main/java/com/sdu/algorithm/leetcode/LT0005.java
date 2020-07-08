@@ -14,7 +14,7 @@ package com.sdu.algorithm.leetcode;
  * 输入: "cbbd"
  * 输出: "bb"
  * */
-public class LT005 {
+public class LT0005 {
 
   private static boolean isPalindrome(char[] chars, int l, int h) {
     while (l <= h) {
@@ -55,6 +55,26 @@ public class LT005 {
 
   }
 
+  private static String longestPalindrome01(String s) {
+    // dp[i][j]:
+    int[][] dp = new int[s.length()][s.length()];
+    int left = 0, right = 0;
+    for (int i = s.length() - 2; i >= 0; --i) {
+      dp[i][i] = 1;
+      for (int j = i + 1; j < s.length(); ++j) {
+        if (s.charAt(i) == s.charAt(j) &&
+            (j - i < 3 || dp[i + 1][j - 1] == 1)) {
+          dp[i][j] = 1;
+        }
+        if (dp[i][j] == 1 && j - i > right - left) {
+          left = i;
+          right = j;
+        }
+      }
+    }
+    return s.substring(left, right + 1);
+  }
+
   public static void main(String[] args) {
 
     // TODO: 不是最佳答案
@@ -62,6 +82,7 @@ public class LT005 {
     String s = "a";
 
     System.out.println(longestPalindrome(s));
+    System.out.println(longestPalindrome01("aba"));
 
 
   }
