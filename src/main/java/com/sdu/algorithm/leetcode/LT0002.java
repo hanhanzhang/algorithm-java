@@ -1,30 +1,22 @@
 package com.sdu.algorithm.leetcode;
 
 import com.sdu.algorithm.utils.ListNode;
+import com.sdu.algorithm.utils.ListUtils;
 
-public class LT002 {
+public class LT0002 {
 
   private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-    ListNode root = null;
-    ListNode cur = null;
+    ListNode root = new ListNode(0);
+    ListNode cur = root;
     int carry = 0;
     while (l1 != null || l2 != null) {
       int x = l1 != null ? l1.val : 0;
       int y = l2 != null ? l2.val : 0;
       int sum = x + y + carry;
-
-      // 算商
       carry = sum / 10;
-      // 算余数
       ListNode node = new ListNode(sum % 10);
-
-      if (root == null) {
-        root = node;
-        cur = node;
-      } else {
-        cur.next = node;
-        cur = node;
-      }
+      cur.next = node;
+      cur = node;
 
       l1 = l1 != null ? l1.next : null;
       l2 = l2 != null ? l2.next : null;
@@ -34,23 +26,18 @@ public class LT002 {
       cur.next = new ListNode(carry);
     }
 
-    return root;
+    return root.next;
   }
 
   public static void main(String[] args) {
-    ListNode l1 = new ListNode(2);
-    l1.next = new ListNode(4);
-    l1.next.next = new ListNode(3);
+    ListNode l1 = ListUtils.buildListNode(new Integer[] {2, 4, 3});
+    ListNode l2 = ListUtils.buildListNode(new Integer[] {5, 6, 4});
 
-    ListNode l2 = new ListNode(5);
-    l2.next = new ListNode(6);
-    l2.next.next = new ListNode(4);
+    ListNode head = addTwoNumbers(l1, l2);
 
-    ListNode node = addTwoNumbers(l1, l2);
-
-    while (node != null) {
-      System.out.print(node.val);
-      node = node.next;
+    while (head != null) {
+      System.out.print(head.val);
+      head = head.next;
     }
   }
 
