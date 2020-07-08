@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT011 {
+public class LT0011 {
 
   private static int maxArea(int[] height) {
     /*
