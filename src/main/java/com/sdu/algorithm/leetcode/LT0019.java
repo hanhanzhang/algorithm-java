@@ -3,7 +3,7 @@ package com.sdu.algorithm.leetcode;
 import com.sdu.algorithm.utils.ListNode;
 import com.sdu.algorithm.utils.ListUtils;
 
-public class LT019 {
+public class LT0019 {
 
   // 递归方式
   private static Object[] removeNth(ListNode head, int n) {
@@ -27,6 +27,7 @@ public class LT019 {
 
   // 双指针方法
   private static ListNode removeNthFromEnd0(ListNode head, int n) {
+
     ListNode dummy = new ListNode(0);
     dummy.next = head;
     ListNode first = dummy;
