@@ -16,7 +16,6 @@ public class LT0206 {
         head = head.next;
         dumpNode.next.next = temp;
       }
-
       return dumpNode.next;
     }
 
