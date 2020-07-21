@@ -2,28 +2,19 @@ package com.sdu.algorithm.leetcode;
 
 import com.sdu.algorithm.utils.ListNode;
 
-public class LT141 {
+public class LT0141 {
 
   private static boolean hasCycle(ListNode head) {
-    if (head == null || head.next == null) {
-      return false;
-    }
-
-    // 快慢指针
-    ListNode low = head.next, quick = head.next.next;
-
-    while (low != null && quick != null) {
-      if (low == quick) {
-        return true;
-      }
-      if (quick.next == null) {
+    ListNode slow = head;
+    ListNode fast = head;
+    do {
+      if (slow == null || fast == null || fast.next == null) {
         return false;
       }
-      quick = quick.next.next;
-      low = low.next;
-    }
-
-    return false;
+      slow = slow.next;
+      fast = fast.next.next;
+    } while (slow != fast);
+    return true;
   }
 
   public static void main(String[] args) {
