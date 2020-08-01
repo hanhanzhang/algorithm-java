@@ -26,11 +26,13 @@ public class JZ005 {
     push(1);
     push(2);
     push(3);
-    System.out.println(pop());
-    System.out.println(pop());
     push(4);
     System.out.println(pop());
+    System.out.println(pop());
     push(5);
+    System.out.println(pop());
+    push(6);
+    System.out.println(pop());
     System.out.println(pop());
     System.out.println(pop());
   }
