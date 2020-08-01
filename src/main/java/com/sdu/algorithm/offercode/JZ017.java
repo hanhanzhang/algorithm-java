@@ -36,6 +36,7 @@ public class JZ017 {
   public static void main(String[] args) {
     TreeNode root1 = TreeUtils.buildTree(new Integer[]{1, 2, 3, 1, null, null, null, 2, 4});
     TreeNode root2 = TreeUtils.buildTree(new Integer[]{1, 2, 4});
+    System.out.print("Result should be true, actual: ");
     System.out.println(HasSubtree(root1, root2));
   }
 
