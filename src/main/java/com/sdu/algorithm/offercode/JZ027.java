@@ -39,6 +39,7 @@ public class JZ027 {
   public static void main(String[] args) {
     ArrayList<String> ans = Permutation("abc");
     System.out.println(ans);
+    System.out.println("*******************");
 
     ArrayList<String> ans1 = Permutation("aa");
     System.out.println(ans1);
