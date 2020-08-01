@@ -29,6 +29,8 @@ public class JZ032 {
 
   public static void main(String[] args) {
     System.out.println(PrintMinNumber(new int[] {32, 321, 3}));
+    System.out.println("*******");
+    System.out.println(PrintMinNumber(new int[] {32, 321, 32}));
   }
 
 }
