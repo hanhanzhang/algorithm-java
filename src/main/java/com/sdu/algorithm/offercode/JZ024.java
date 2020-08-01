@@ -45,7 +45,7 @@ public class JZ024 {
 
   public static void main(String[] args) {
     TreeNode root = TreeUtils.buildTree(new Integer[] {1, 2, 2, 3, 3, 3, 4});
-    ArrayList<ArrayList<Integer>> ans = FindPath(root, 6);
+    ArrayList<ArrayList<Integer>> ans = FindPath(root, 7);
     System.out.println(ans);
   }
 
