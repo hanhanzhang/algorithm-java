@@ -16,9 +16,11 @@ public class JZ013 {
           tmp += 1;
         }
         if (tmp == array.length) {
+          // 后面已全部是偶数, 则调整结束
           return;
         }
         int evenNum = array[tmp];
+        // 移动偶数, 保持相对位置不变
         for (int i = tmp; i > cur; --i) {
           array[i] = array[i - 1];
         }
