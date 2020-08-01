@@ -5,42 +5,49 @@ import com.sdu.algorithm.utils.ListUtils;
 
 public class JZ015 {
 
-  private static ListNode newHead;
+  public static class Solution1 {
 
-  private static ListNode reverseList(ListNode head) {
-    if (head.next == null) {
-      newHead = head;
-      return head;
+    private static ListNode[] reverseList(ListNode head, ListNode cur) {
+      if (cur.next == null) {
+        return new ListNode[] {cur, cur};
+      }
+      ListNode[] ret = reverseList(head, cur.next);
+      ret[1].next = cur;
+      ret[1] = cur;
+      if (cur == head) {
+        cur.next = null;
+      }
+      return ret;
     }
-    ListNode ans = reverseList(head.next);
-    ans.next = head;
-    return head;
+
+    public static ListNode reverseList(ListNode head) {
+      if (head == null) {
+        return null;
+      }
+      return reverseList(head, head)[0];
+    }
+
   }
 
-  private static ListNode ReverseList(ListNode head) {
-    if (head == null) {
-      return null;
-    }
-    ListNode node = reverseList(head);
-    node.next = null;
-    return newHead;
-  }
+  public static class Solution2 {
 
-  private static ListNode ReverseList01(ListNode head) {
-    // 非递归形式
-    ListNode pre = null;
-    while (head != null) {
-      ListNode temp = head.next;
-      head.next = pre;
-      pre = head;
-      head = temp;
+    public static ListNode reverseList(ListNode head) {
+      // 哑巴节点
+      ListNode dumpNode = new ListNode(0);
+      while (head != null) {
+        ListNode temp = head.next;
+        head.next = dumpNode.next;
+        dumpNode.next = head;
+        head = temp;
+      }
+      return dumpNode.next;
     }
-    return pre;
+
   }
 
   public static void main(String[] args) {
     ListNode head = ListUtils.buildListNode(new Integer[] {1, 2, 3, 4, 5});
-    ListNode newHead = ReverseList(head);
+    ListNode newHead = Solution1.reverseList(head);
 
     while (newHead != null) {
       System.out.println(newHead.val);
@@ -50,7 +57,7 @@ public class JZ015 {
     System.out.println("**********");
 
     ListNode head1 = ListUtils.buildListNode(new Integer[] {1, 2, 3, 4, 5});
-    ListNode newHead1 = ReverseList01(head1);
+    ListNode newHead1 = Solution2.reverseList(head1);
     while (newHead1 != null) {
       System.out.println(newHead1.val);
       newHead1 = newHead1.next;
