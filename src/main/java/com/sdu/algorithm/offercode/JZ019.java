@@ -22,6 +22,7 @@ public class JZ019 {
         continue;
       }
       if (matrix[i][j] == Integer.MIN_VALUE) {
+        // 已访问过, 则需要调整方向
         i -= moved[pos][0];
         j -= moved[pos][1];
         pos = ++pos % 4;
