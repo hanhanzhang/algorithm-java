@@ -21,6 +21,7 @@ public class JZ034 {
   }
 
   public static void main(String[] args) {
+    System.out.println(FirstNotRepeatingChar(null));
     System.out.println(FirstNotRepeatingChar("IamIbm"));
     System.out.println(FirstNotRepeatingChar("IbmIbm"));
   }
