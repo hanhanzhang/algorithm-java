@@ -3,25 +3,23 @@ package com.sdu.algorithm.offercode;
 public class JZ002 {
 
   private static String replaceSpace(StringBuffer str) {
-    int p1 = str.length() - 1;
-    for (int i = 0; i <= p1; ++i) {
+    int len = str.length();
+    for (int i = 0; i < len; ++i) {
       if (str.charAt(i) == ' ') {
+        // 添加两个空格
         str.append("  ");
       }
     }
-
-    int p2 = str.length() - 1;
-    while (p1 >= 0 && p2 > p1) {
-      char c = str.charAt(p1--);
-      if (c == ' ') {
-        str.setCharAt(p2--, '0');
-        str.setCharAt(p2--, '2');
-        str.setCharAt(p2--, '%');
+    int pos = str.length() - 1;
+    for (int i = len - 1; i >= 0; --i) {
+      if (str.charAt(i) == ' ') {
+        str.setCharAt(pos--, '0');
+        str.setCharAt(pos--, '2');
+        str.setCharAt(pos--, '%');
       } else {
-        str.setCharAt(p2--, c);
+        str.setCharAt(pos--, str.charAt(i));
       }
     }
-
     return str.toString();
   }
 
