@@ -3,7 +3,7 @@ package com.sdu.algorithm.offercode;
 public class JZ030 {
 
   private static int FindGreatestSumOfSubArray(int[] array) {
-    //
+    // 最值问题: 有限考虑动态规划
     int max = Integer.MIN_VALUE;
     int[] dp = new int[array.length];
     dp[0] = array[0];
