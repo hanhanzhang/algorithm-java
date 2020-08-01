@@ -4,8 +4,8 @@ import java.util.Stack;
 
 public class JZ020 {
 
-  private static Stack<Integer> stack = new Stack<>();
-  private static Stack<Integer> minStack = new Stack<>();
+  private static final Stack<Integer> stack = new Stack<>();
+  private static final Stack<Integer> minStack = new Stack<>();
   private static int min = Integer.MAX_VALUE;
 
   private static void push(int node) {
@@ -27,6 +27,13 @@ public class JZ020 {
 
   private static int min() {
     return minStack.peek();
+  }
+
+  public static void main(String[] args) {
+    push(1);
+    push(2);
+    push(1);
+    System.out.println(min());
   }
 
 }
