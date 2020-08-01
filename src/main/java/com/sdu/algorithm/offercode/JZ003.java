@@ -21,7 +21,7 @@ public class JZ003 {
   }
 
   public static void main(String[] args) {
-    ListNode head = ListUtils.buildListNode(new Integer[] {1, 2, 3, 4, 5});
+    ListNode head = ListUtils.buildListNode(new Integer[] {1, 2, 3, 4, 5, 6});
     ArrayList<Integer> ans = printListFromTailToHead(head);
     System.out.println(ans);
   }
