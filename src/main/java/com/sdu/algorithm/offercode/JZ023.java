@@ -11,6 +11,7 @@ public class JZ023 {
     }
     int root = sequence[end];
     int pos = -1;
+    // 找到第一个比root大的节点, 划为左子树区间, 其他为右子树区间
     for (int i = start; i < end; ++i) {
       if (sequence[i] > root) {
         pos = i;
