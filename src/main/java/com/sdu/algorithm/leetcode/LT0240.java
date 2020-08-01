@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT240 {
+public class LT0240 {
 
 
   private static boolean searchMatrix(int[][] matrix, int target) {
