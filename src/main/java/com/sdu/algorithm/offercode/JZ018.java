@@ -9,9 +9,9 @@ public class JZ018 {
     if (root == null) {
       return;
     }
-    TreeNode tmp = root.left;
+    TreeNode temp = root.left;
     root.left = root.right;
-    root.right = tmp;
+    root.right = temp;
     Mirror(root.left);
     Mirror(root.right);
   }
