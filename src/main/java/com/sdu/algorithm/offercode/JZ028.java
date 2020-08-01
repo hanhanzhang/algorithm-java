@@ -28,6 +28,7 @@ public class JZ028 {
 
   public static void main(String[] args) {
     System.out.println(MoreThanHalfNum_Solution(new int[] {1, 2, 3, 2, 2, 2, 5, 4, 2}));
+    System.out.println(MoreThanHalfNum_Solution(new int[] {1, 2, 3, 2, 2, 3, 2, 5, 4, 2}));
   }
 
 }
