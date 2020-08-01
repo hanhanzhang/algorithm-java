@@ -1,6 +1,8 @@
 package com.sdu.algorithm.offercode;
 
 import com.sdu.algorithm.utils.TreeNode;
+import com.sdu.algorithm.utils.TreeUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,7 +44,8 @@ public class JZ039 {
   }
 
   public static void main(String[] args) {
-
+    TreeNode root = TreeUtils.buildTree(new Integer[] {1, 2, null, null, 3, 4, 5});
+    System.out.println(IsBalanced_Solution(root));
   }
 
 }
