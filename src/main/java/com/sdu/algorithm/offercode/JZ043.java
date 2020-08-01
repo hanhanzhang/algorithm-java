@@ -12,6 +12,7 @@ public class JZ043 {
 
   public static void main(String[] args) {
     System.out.println(LeftRotateString("abcXYZdef", 3));
+    System.out.println("**********");
     System.out.println(LeftRotateString("abcXHZdef", 4));
   }
 
