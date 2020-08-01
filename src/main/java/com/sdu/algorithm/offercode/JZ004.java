@@ -4,6 +4,12 @@ import com.sdu.algorithm.utils.TreeNode;
 
 public class JZ004 {
 
+  /**
+   * @param ps 前序序列开始
+   * @param pe 前序序列结束
+   * @param is 中序序列开始
+   * @param ie 中序序列结束
+   * */
   private static TreeNode buildTree(int[] pre, int[] in, int ps, int pe, int is, int ie) {
     if (ps > pe || is > ie) {
       return null;
