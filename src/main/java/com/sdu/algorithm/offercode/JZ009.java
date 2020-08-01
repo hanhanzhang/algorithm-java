@@ -12,6 +12,7 @@ public class JZ009 {
   public static void main(String[] args) {
     System.out.println(JumpFloorII(1));
     System.out.println(JumpFloorII(2));
+    System.out.println(JumpFloorII(3));
   }
 
 }
