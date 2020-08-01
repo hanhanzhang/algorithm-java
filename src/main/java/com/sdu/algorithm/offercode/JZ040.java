@@ -20,7 +20,7 @@ public class JZ040 {
     return (number & mark) == mark;
   }
 
-  private static void FindNumsAppearOnce(int[] array, int[] num1, int[] num2) {
+  private static void FindNumberAppearOnce(int[] array, int[] num1, int[] num2) {
     int ret = 0;
     for (int num : array) {
       ret ^= num;
@@ -45,7 +45,7 @@ public class JZ040 {
     int[] array = new int[] {2, 3, 5, 5, 6, 6, 7, 7};
     int[] num1 = new int[1];
     int[] num2 = new int[1];
-    FindNumsAppearOnce(array, num1, num2);
+    FindNumberAppearOnce(array, num1, num2);
 
     System.out.println(num1[0]);
     System.out.println(num2[0]);
