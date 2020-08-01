@@ -26,7 +26,7 @@ public class JZ016 {
 
   public static void main(String[] args) {
     ListNode list1 = ListUtils.buildListNode(new Integer[] {1, 3, 5});
-    ListNode list2 = ListUtils.buildListNode(new Integer[] {2, 4, 6, 8});
+    ListNode list2 = ListUtils.buildListNode(new Integer[] {2, 4, 6, 5, 8});
     ListNode head = Merge(list1, list2);
 
     while (head != null) {
