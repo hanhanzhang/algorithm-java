@@ -37,4 +37,8 @@ public class JZ025 {
     return head.next;
   }
 
+  public static void main(String[] args) {
+
+  }
+
 }
