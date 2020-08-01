@@ -1,6 +1,7 @@
 package com.sdu.algorithm.offercode;
 
 import com.sdu.algorithm.utils.ListNode;
+import com.sdu.algorithm.utils.ListUtils;
 
 public class JZ036 {
 
@@ -16,6 +17,24 @@ public class JZ036 {
   }
 
   public static void main(String[] args) {
+    ListNode common = ListUtils.buildListNode(new Integer[] {5, 6, 7});
+    ListNode n1 = ListUtils.buildListNode(new Integer[] {1, 2, 3, 4});
+    ListNode n2 = ListUtils.buildListNode(new Integer[] {1, 2});
+
+    //
+    ListNode cur = n1;
+    while (cur.next != null) {
+      cur = cur.next;
+    }
+    cur.next = common;
+
+    cur = n2;
+
+    while (cur.next != null) {
+      cur = cur.next;
+    }
+    cur.next = common;
+    System.out.println(FindFirstCommonNode(n1, n2).val);
 
   }
 
