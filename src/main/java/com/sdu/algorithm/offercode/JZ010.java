@@ -19,6 +19,7 @@ public class JZ010 {
   public static void main(String[] args) {
     System.out.println(RectCover(10));
     System.out.println(RectCover(9));
+    System.out.println(RectCover(7));
   }
 
 }
