@@ -30,6 +30,7 @@ public class JZ014 {
     System.out.println(FindKthToTail(head, 2));
     System.out.println(FindKthToTail(head, 3));
     System.out.println(FindKthToTail(head, 6));
+    System.out.println(FindKthToTail(head, 4));
 
   }
 
