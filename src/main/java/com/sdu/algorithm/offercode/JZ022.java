@@ -15,16 +15,13 @@ public class JZ022 {
     queue.offer(root);
 
     while (!queue.isEmpty()) {
-      int len = queue.size();
-      for (int i = 0; i < len; ++i) {
-        TreeNode node = queue.poll();
-        if (node == null) {
-          continue;
-        }
-        ans.add(node.val);
-        queue.offer(node.left);
-        queue.offer(node.right);
+      TreeNode node = queue.poll();
+      if (node == null) {
+        continue;
       }
+      ans.add(node.val);
+      queue.offer(node.left);
+      queue.offer(node.right);
     }
 
     return ans;
