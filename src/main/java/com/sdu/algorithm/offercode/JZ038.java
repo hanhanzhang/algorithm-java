@@ -14,7 +14,7 @@ public class JZ038 {
   }
 
   public static void main(String[] args) {
-    TreeNode root = TreeUtils.buildTree(new Integer[] {1, 2, null, 3, 4});
+    TreeNode root = TreeUtils.buildTree(new Integer[] {1, 2, null, 3, 4, 5});
     System.out.println(TreeDepth(root));
   }
 
