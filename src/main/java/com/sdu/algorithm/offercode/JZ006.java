@@ -24,6 +24,7 @@ public class JZ006 {
     System.out.println(minNumberInRotateArray(new int[] {6, 1, 2, 3, 4, 5}));
     System.out.println(minNumberInRotateArray(new int[] {5, 6, 1, 2, 3, 4}));
     System.out.println(minNumberInRotateArray(new int[] {4, 5, 6, 1, 2}));
+    System.out.println(minNumberInRotateArray(new int[] {1, 0, 1, 1, 1}));
   }
 
 }
