@@ -3,6 +3,7 @@ package com.sdu.algorithm.leetcode;
 public class LT0005_Unresolved {
 
   private static String longestPalindrome(String s) {
+    // dp[i][j]: s[i]~s[j]
     return null;
   }
 
