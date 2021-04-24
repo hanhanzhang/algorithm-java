@@ -5,7 +5,7 @@ import com.sdu.algorithm.utils.TreeUtils;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class LT297 {
+public class LT0297 {
 
   private static String serialize(TreeNode root) {
     Queue<TreeNode> queue = new LinkedList<>();
