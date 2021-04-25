@@ -3,7 +3,7 @@ package com.sdu.algorithm.leetcode;
 import com.sdu.algorithm.utils.TreeNode;
 import com.sdu.algorithm.utils.TreeUtils;
 
-public class LT236 {
+public class LT0236 {
 
   private static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
     if (root == null) return null;

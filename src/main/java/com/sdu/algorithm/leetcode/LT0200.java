@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT200 {
+public class LT0200 {
 
   private static void dfs(char[][] grid, int i, int j) {
     if (i < 0 || j < 0 || i >= grid.length || j >= grid[i].length || grid[i][j] == '3' || grid[i][j] == '0') {
