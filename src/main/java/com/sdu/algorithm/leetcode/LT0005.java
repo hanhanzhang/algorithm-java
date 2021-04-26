@@ -3,15 +3,36 @@ package com.sdu.algorithm.leetcode;
 public class LT0005 {
 
   private static String longestPalindrome(String s) {
-    // dp[i][j]: s[i]~s[j]为回文串
-    // dp[i][j] = dp[i + 1][j - 1] && s[j] == s[j]
-    if (s.length() < 2) return s;
-    boolean[][] dp = new boolean[s.length()][s.length()];
-    for (int i = 0; i < s.length(); ++i) {
-      dp[i][i] = true;
+    if (s.isEmpty()) {
+      return "";
+    }
+    String reverse = new StringBuffer(s).reverse().toString();
+    int length = s.length();
+    int[] arr = new int[length];
+    int maxLen = 0;
+    int maxEnd = 0;
+    for (int i = 0; i < length; i++) {
+      for (int j = length - 1; j >= 0; j--) {
+        if (s.charAt(i) == reverse.charAt(j)) {
+          if (i == 0 || j == 0) {
+            arr[j] = 1;
+          } else {
+            arr[j] = arr[j - 1] + 1;
+          }
+        } else {
+          arr[j] = 0;
+        }
+        if (arr[j] > maxLen) {
+          int beforeRev = length - 1 - j;
+          if (beforeRev + arr[j] - 1 == i) {
+            maxLen = arr[j];
+            maxEnd = i;
+          }
+        }
+      }
     }
 
-    return null;
+    return s.substring(maxEnd - maxLen + 1, maxEnd + 1);
   }
 
   public static void main(String[] args) {

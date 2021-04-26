@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT0440_Unresolved {
+public class LT0440 {
 
     private static int findKthNumber(int n, int k) {
         return 0;
