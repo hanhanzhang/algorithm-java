@@ -1,9 +1,9 @@
 package com.sdu.algorithm.leetcode;
 
-import com.sdu.algorithm.utils.TreeUtils;
 import com.sdu.algorithm.utils.TreeNode;
+import com.sdu.algorithm.utils.TreeUtils;
 
-public class LT404 {
+public class LT0404 {
 
   private static int sumOfLeftLeavesInternal(TreeNode root, boolean isLeft) {
     if (root == null) return 0;
