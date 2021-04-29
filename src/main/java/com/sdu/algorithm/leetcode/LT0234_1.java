@@ -12,6 +12,7 @@ public class LT0234_1 {
         if (!recursivelyCheck(current.next) || current.val != frontPointer.val) {
             return false;
         }
+
         frontPointer = frontPointer.next;
         return true;
     }
