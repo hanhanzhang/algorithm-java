@@ -5,16 +5,18 @@ import com.sdu.algorithm.utils.ListNode;
 public class LT0141 {
 
   private static boolean hasCycle(ListNode head) {
-    ListNode slow = head;
-    ListNode fast = head;
-    do {
-      if (slow == null || fast == null || fast.next == null) {
-        return false;
+    ListNode slow = head, fast = head;
+    while (true) {
+      if (fast == null || fast.next == null) {
+        break;
       }
       slow = slow.next;
       fast = fast.next.next;
-    } while (slow != fast);
-    return true;
+      if (fast == slow) {
+        return true;
+      }
+    }
+    return false;
   }
 
   public static void main(String[] args) {
