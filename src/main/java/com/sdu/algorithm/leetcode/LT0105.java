@@ -2,7 +2,7 @@ package com.sdu.algorithm.leetcode;
 
 import com.sdu.algorithm.utils.TreeNode;
 
-public class LT105 {
+public class LT0105 {
 
   private static TreeNode buildTree(int[] preorder, int index, int[] inorders, int start, int end) {
     if (start > end) return null;

@@ -10,4 +10,10 @@ public class ArrayUtils {
         System.out.println(sb.toString());
     }
 
+    public static void printArray(int[][] array) {
+        for (int[] row : array) {
+            printArray(row);
+        }
+    }
+
 }

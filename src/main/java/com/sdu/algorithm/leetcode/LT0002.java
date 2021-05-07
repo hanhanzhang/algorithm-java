@@ -6,10 +6,10 @@ import com.sdu.algorithm.utils.ListUtils;
 public class LT0002 {
 
   private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-    ListNode root = new ListNode(0);
-    ListNode cur = root;
+    ListNode dumpNode = new ListNode(0);
+    ListNode cur = dumpNode;
     int carry = 0;
-    while (l1 != null || l2 != null) {
+    while (l1 != null || l2 != null || carry != 0) {
       int x = l1 != null ? l1.val : 0;
       int y = l2 != null ? l2.val : 0;
       int sum = x + y + carry;
@@ -22,11 +22,7 @@ public class LT0002 {
       l2 = l2 != null ? l2.next : null;
     }
 
-    if (carry > 0) {
-      cur.next = new ListNode(carry);
-    }
-
-    return root.next;
+    return dumpNode.next;
   }
 
   public static void main(String[] args) {

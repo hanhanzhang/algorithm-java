@@ -2,7 +2,7 @@ package com.sdu.algorithm.leetcode;
 
 import java.util.Arrays;
 
-public class LT322 {
+public class LT0322 {
 
   private static int dfs(int[] coins, int amount, Integer[] memo) {
     if (amount == 0) {
