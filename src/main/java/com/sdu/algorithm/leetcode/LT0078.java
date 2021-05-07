@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class LT078 {
+public class LT0078 {
 
   private static List<List<Integer>> dfs(int[] nums, int start) {
     List<List<Integer>> ans = new LinkedList<>();
