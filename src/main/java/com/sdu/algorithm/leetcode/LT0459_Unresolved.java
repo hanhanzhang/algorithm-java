@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT0459 {
+public class LT0459_Unresolved {
 
     private static boolean repeatedSubstringPattern(String s) {
         // TODO: 2021/5/7 KMP算法
