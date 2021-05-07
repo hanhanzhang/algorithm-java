@@ -2,7 +2,7 @@ package com.sdu.algorithm.leetcode;
 
 import java.util.Stack;
 
-public class LT151 {
+public class LT0151 {
 
   private static String reverseWords(String s) {
     if (s == null || s.isEmpty()) return "";
@@ -31,7 +31,7 @@ public class LT151 {
         sb.append(stack.pop());
       }
     }
-    return String.join("", stack);
+    return sb.toString();
   }
 
   public static void main(String[] args) {
