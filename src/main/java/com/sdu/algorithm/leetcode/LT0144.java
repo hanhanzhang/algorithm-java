@@ -2,26 +2,26 @@ package com.sdu.algorithm.leetcode;
 
 import com.sdu.algorithm.utils.TreeNode;
 import com.sdu.algorithm.utils.TreeUtils;
-import java.util.LinkedList;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class LT144 {
+public class LT0144 {
 
   private static List<Integer> preorderTraversal(TreeNode root) {
-    List<Integer> res = new LinkedList<>();
     Stack<TreeNode> stack = new Stack<>();
-
-    TreeNode cur = root;
-    while (cur != null || !stack.isEmpty()) {
-      while (cur != null) {
-        res.add(cur.val);
-        stack.push(cur.right);
-        cur = cur.left;
+    List<Integer> res = new ArrayList<>();
+    while (root != null || !stack.isEmpty()) {
+      while (root != null) {
+        res.add(root.val);
+        if (root.right != null) stack.push(root.right);
+        root = root.left;
       }
-      cur = stack.pop();
+      if (!stack.isEmpty()) {
+        root = stack.pop();
+      }
     }
-
     return res;
   }
 
