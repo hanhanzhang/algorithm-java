@@ -1,14 +1,16 @@
 package com.sdu.algorithm.offercode;
 
 import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Queue;
 
-public class OR059_II_Unresolved {
+public class OR059_II {
 
     public static class MaxQueue {
 
         private Queue<Integer> queue;
-        private Queue<Integer> maxQueue;
+        private Deque<Integer> maxQueue;
+
 
         public MaxQueue() {
             queue = new ArrayDeque<>();
@@ -21,21 +23,18 @@ public class OR059_II_Unresolved {
 
         public void push_back(int value) {
             queue.offer(value);
-            while (!maxQueue.isEmpty() && maxQueue.peek() < value) {
-                maxQueue.poll();
+            // maxQueue移除比当前value小的元素
+            while (!maxQueue.isEmpty() && maxQueue.peekLast() < value) {
+                maxQueue.pollLast();
             }
-            maxQueue.offer(value);
+            maxQueue.offerLast(value);
         }
 
         public int pop_front() {
-            if (queue.isEmpty()) {
-                return -1;
-            }
-            int ans = queue.poll();
-            if (ans == max_value()) {
-                maxQueue.poll();
-            }
-            return ans;
+            if (queue.isEmpty()) return -1;
+            int value = queue.poll();
+            if (value == maxQueue.peekFirst()) maxQueue.pollFirst();
+            return value;
         }
     }
 
