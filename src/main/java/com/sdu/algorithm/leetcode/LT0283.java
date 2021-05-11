@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT283 {
+public class LT0283 {
 
   private static void moveZeroes(int[] nums) {
     if (nums == null || nums.length == 0) {
