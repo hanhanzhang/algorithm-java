@@ -3,7 +3,7 @@ package com.sdu.algorithm.leetcode;
 import com.sdu.algorithm.utils.ListNode;
 import com.sdu.algorithm.utils.ListUtils;
 
-public class LT0234_1 {
+public class LT0234II {
 
     private static ListNode frontPointer;
 

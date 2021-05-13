@@ -3,7 +3,7 @@ package com.sdu.algorithm.leetcode;
 import com.sdu.algorithm.utils.ListNode;
 import com.sdu.algorithm.utils.ListUtils;
 
-public class LT0148_1 {
+public class LT0148II {
 
     private static ListNode quickSort(ListNode head, ListNode tail) {
         if (head == null || head == tail) {

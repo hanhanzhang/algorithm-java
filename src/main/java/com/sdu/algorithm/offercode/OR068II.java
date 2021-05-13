@@ -3,7 +3,7 @@ package com.sdu.algorithm.offercode;
 import com.sdu.algorithm.utils.TreeNode;
 import com.sdu.algorithm.utils.TreeUtils;
 
-public class OR068_1 {
+public class OR068II {
 
     private static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root.val == p.val || root.val == q.val) {

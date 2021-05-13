@@ -5,7 +5,7 @@ import com.sdu.algorithm.utils.ListNode;
 import java.util.HashSet;
 import java.util.Set;
 
-public class LT0142_1 {
+public class LT0142II {
 
     private static ListNode detectCycle(ListNode head) {
         // 哈希: 第一次访问过即入环口

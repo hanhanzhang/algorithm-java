@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT0322_1 {
+public class LT0322II {
 
     private static int coinChange(int[] coins, int amount) {
         // dp[i]: 凑成i元最少的硬币数

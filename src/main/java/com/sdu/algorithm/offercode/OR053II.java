@@ -1,6 +1,6 @@
 package com.sdu.algorithm.offercode;
 
-public class OR053_I {
+public class OR053II {
 
     // 在排序数组中查找数字出现次数
     private static int search(int[] nums, int target) {

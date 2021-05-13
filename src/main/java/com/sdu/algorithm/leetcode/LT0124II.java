@@ -3,7 +3,7 @@ package com.sdu.algorithm.leetcode;
 import com.sdu.algorithm.utils.TreeNode;
 import com.sdu.algorithm.utils.TreeUtils;
 
-public class LT0124_1 {
+public class LT0124II {
 
     private static Integer maxSum = Integer.MIN_VALUE;
 

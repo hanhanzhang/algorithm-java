@@ -2,7 +2,7 @@ package com.sdu.algorithm.leetcode;
 
 import java.util.Arrays;
 
-public class LT0611_1 {
+public class LT0611II {
 
     private static int triangleNumber(int[] nums) {
         // 数组排序, a <= b <= c, 故 a + c > b 和 b + c > a 一定成立, 只需判断 a + b >= c 且 a 或 b 不可为 0

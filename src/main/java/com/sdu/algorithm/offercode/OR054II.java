@@ -5,7 +5,7 @@ import com.sdu.algorithm.utils.TreeUtils;
 
 import java.util.Stack;
 
-public class OR054_1 {
+public class OR054II {
 
     private static int kthLargest(TreeNode root, int k) {
         // 右 -> 中 -> 左: 从大到小

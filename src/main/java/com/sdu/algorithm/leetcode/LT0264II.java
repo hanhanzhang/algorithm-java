@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT0264_1 {
+public class LT0264II {
 
     private static int nthUglyNumber(int n) {
         // dp[i]: 第i个丑数

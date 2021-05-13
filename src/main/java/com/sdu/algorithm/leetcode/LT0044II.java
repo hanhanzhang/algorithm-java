@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT0044_1 {
+public class LT0044II {
 
     private static boolean isMatch(String s, String p) {
         // dp[i][j]

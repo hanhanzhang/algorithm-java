@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Queue;
 
-public class OR059_II {
+public class OR059II {
 
     public static class MaxQueue {
 
