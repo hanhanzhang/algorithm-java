@@ -6,6 +6,9 @@ public class LT0516M {
         // 区间动态规划
         int n = s.length();
         int[][] dp = new int[n][n];
+        for (int i = 0; i < n; ++i) {
+            dp[i][i] = 1;
+        }
         for (int len = 2; len <= n; ++len) {
             for (int l = 0; l + len - 1 < n; ++l) {
                 int r = l + len - 1;
@@ -22,6 +25,7 @@ public class LT0516M {
     public static void main(String[] args) {
         System.out.println(longestPalindromeSubseq("bbbab"));
         System.out.println(longestPalindromeSubseq("cbbd"));
+        System.out.println(longestPalindromeSubseq("aaa"));
     }
 
 }
