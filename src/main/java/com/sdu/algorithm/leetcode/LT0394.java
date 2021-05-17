@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class LT394 {
+public class LT0394 {
 
   private static String decodeString(String s) {
     if (s == null || s.isEmpty()) {
