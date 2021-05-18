@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT014 {
+public class LT0014 {
 
   private static String longestCommonPrefix(String[] strs) {
     if (strs == null || strs.length == 0) {
@@ -31,11 +31,8 @@ public class LT014 {
   }
 
   public static void main(String[] args) {
-    String[] strs = new String[] {"flower", "flow", "flight"};
-    System.out.println(longestCommonPrefix(strs));
-
-    String[] strs1 = new String[] {"a"};
-    System.out.println(longestCommonPrefix(strs1));
+    System.out.println(longestCommonPrefix(new String[] {"flower", "flow", "flight"}));
+    System.out.println(longestCommonPrefix(new String[] {"a"}));
   }
 
 }
