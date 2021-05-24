@@ -16,9 +16,9 @@ public class LT0662 {
         queue.offer(root);
         int maxWidth = 0;
         while (!queue.isEmpty()) {
-            int size = queue.size();
+            int cnt = queue.size();
             maxWidth = Math.max(maxWidth, queue.peekLast().val - queue.peekFirst().val + 1);
-            for (int i = 0; i < size; ++i) {
+            for (int i = 0; i < cnt; ++i) {
                 TreeNode cur = queue.poll();
                 if (cur.left != null) {
                     cur.left.val = cur.val * 2 - 1;
