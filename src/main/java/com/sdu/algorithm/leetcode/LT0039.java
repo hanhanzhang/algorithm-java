@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class LT039 {
+public class LT0039 {
 
   // start位置用于去重, 表示start前的元素不可再次被选择
   private static List<List<Integer>> combinationSum(int[] candidates, int start, int target) {
