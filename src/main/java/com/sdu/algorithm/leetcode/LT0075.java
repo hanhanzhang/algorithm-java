@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT075 {
+public class LT0075 {
 
   private static void sortColors(int[] nums) {
     int[] colorPos = new int[]{-1, -1, -1};

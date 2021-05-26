@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class LT079 {
+public class LT0079 {
 
   private static boolean dfs(char[][]board, int i, int j, String word, int position, int[][] visited) {
     if (position >= word.length()) {
