@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class LT095 {
+public class LT0095 {
 
   private static List<TreeNode> buildTree(int start, int end) {
     if (start > end) {
