@@ -2,7 +2,7 @@ package com.sdu.algorithm.leetcode;
 
 import com.sdu.algorithm.utils.ArrayUtils;
 
-public class LT034 {
+public class LT0034 {
 
 
   private static int[] searchRange(int[] nums, int target) {
