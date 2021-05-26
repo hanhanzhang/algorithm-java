@@ -3,7 +3,7 @@ package com.sdu.algorithm.leetcode;
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class LT071 {
+public class LT0071 {
 
   private static void simplifyPath(Deque<String> deque, String dir) {
     switch (dir) {
