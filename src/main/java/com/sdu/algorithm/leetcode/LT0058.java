@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT058 {
+public class LT0058 {
 
   private static int lengthOfLastWord(String s) {
     // 从后向前找更简单, 要找最后一个单词的长度
