@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class LT049 {
+public class LT0049 {
 
   private static List<List<String>> groupAnagrams(String[] strs) {
     if (strs == null || strs.length == 0) {
