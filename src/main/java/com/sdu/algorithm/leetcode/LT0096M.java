@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT096 {
+public class LT0096M {
 
   // 这种方式提交, 超时
   private static int buildTree(int start, int end) {
