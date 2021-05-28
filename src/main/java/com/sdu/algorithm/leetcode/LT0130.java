@@ -1,6 +1,6 @@
 package com.sdu.algorithm.leetcode;
 
-public class LT130 {
+public class LT0130 {
 
   private static void dfs(char[][] board, int i , int j) {
     if (i < 0 || j < 0 || i >= board.length || j >= board[i].length || board[i][j] == 'X' || board[i][j] == '#') {
